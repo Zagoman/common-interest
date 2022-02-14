@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{Movie Title}}</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="" class="logo">Logo</a>
+        <li><a href="">Home</a></li>
+        <li><a href="">Genres</a></li>
+        <li><a href="">Movies</a></li>
+      </nav>
+    </header>
+    <main>
+      <section class="hero__movie">
+        <h1>{{Movie Title}}</h1>
+        <p class="body">{{Movie Description}}</p>
+        <p class="body is--release-date">{{Release Date}}</p>
+        <img src="{{Movie img[0]}}" alt="" />
+      </section>
+      <section>
+        <h2>{{Main Actors}}</h2>
+        <ul>
+          <li class="actor__name">{{Actor name}}</li>
+          <li class="actor__name">{{Actor name}}</li>
+          <li class="actor__name">{{Actor name}}</li>
+        </ul>
+        <h2>{{Directors}}</h2>
+        <ul>
+          <li class="actor__name">{{Director name}}</li>
+          <li class="actor__name">{{Director name}}</li>
+        </ul>
+        <h2>{{Ratings}}</h2>
+        <span><img src="" alt="star" /> {{Ratings}}</span>
+        <img src="{{Movie img[1]" alt="" />
+      </section>
+    </main>
+    <footer>
+      <nav class="footer__nav">
+        <a href="" class="footer__logo">Logo</a>
+        <ul>
+          <li class="footer__link"><a href="">Home</a></li>
+          <li class="footer__link"><a href="">Genres</a></li>
+          <li class="footer__link"><a href="">Movies</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
