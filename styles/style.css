@@ -36,8 +36,12 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: var(--ff);
+.body {
+  font-family: var(--ff-ter);
+}
+
+body{
+  background-color: var(--clr-bg);
 }
 p {
   line-height: 1.4;
@@ -46,9 +50,35 @@ p {
 img {
   max-width: 100%;
 }
-h1 {
+
+
+.button{
+  font-family: var(--ff-sec);
+  color: var(--clr-bg);
+}
+
+.button:hover{
   color: var(--clr-ter);
-  text-shadow: 3px 3px var(--clr-pri);
+  transform: scale(1.1);
+}
+
+.button:active{
+  transform: scale(0.98);
+  transform: translateY(4px);
+  transform: translateX(4px);
+}
+
+h1 {
+  font-family: "milka";
+  font-weight: normal;
+  color: var(--clr-ter);
+  text-shadow: 2px 2px var(--clr-pri);
+}
+
+h2{
+  font-family: var(--ff-sec);
+  font-weight: bold;
+  color: var(--clr-ter);
 }
 
 /* ?Header nav */
@@ -76,6 +106,7 @@ section:first-child {
   padding-bottom: var(--sp-m);
   min-height: 100vh;
 }
+
 .hero h1 {
   order: -2;
 }
@@ -113,10 +144,14 @@ main section {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: var(--sp-s);
 }
+
 .genres li {
   text-align: center;
   background-color: var(--clr-sec);
   width: 100%;
+  border-radius: 1rem;
+  background-color: var(--clr-pri);
+
 }
 .genres li a {
   padding-block: var(--sp-s);
@@ -131,6 +166,7 @@ main section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: var(--sp-m);
+  justify-items: center;
 }
 .movies h2 {
   grid-column: 1/-1;
