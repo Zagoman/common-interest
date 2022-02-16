@@ -67,7 +67,8 @@ img {
   transform: translateX(4px);
 }
 
-h1 {
+h1,
+.logo_style_as_h1 {
   font-family: "milka";
   font-weight: normal;
   color: var(--clr-ter);
