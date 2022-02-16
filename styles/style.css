@@ -1,8 +1,8 @@
 :root {
-  --clr-pri: red;
-  --clr-sec: orange;
+  --clr-pri: #b43518;
+  --clr-sec: #d1;
   --clr-ter: cyan;
-  --clr-bg: blue;
+  --clr-bg: rgb(249, 247, 233);
   --clr-acc: hotpink;
 
   --sp-xs: 0.5rem;
