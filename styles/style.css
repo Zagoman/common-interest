@@ -85,12 +85,12 @@ h2,
 .banner {
   background-color: var(--clr-blck);
   padding: var(--sp-s);
-  position: fixed;
   inset: 0 0 auto 0;
 }
 
 header nav ul {
   display: flex;
+  align-items: flex-end;
   gap: var(--sp-s);
   list-style: none;
 }
@@ -104,7 +104,6 @@ ul a {
 }
 
 header nav li a h2 {
-  margin-top: 1rem;
   font-size: var(--fs-s);
   color: var(--clr-pri);
 }
@@ -184,14 +183,6 @@ main section {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: var(--sp-m);
   justify-items: center;
-}
-
-@media screen and (min-width: 1150px) {
-  .movies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
 }
 
 .movie {
