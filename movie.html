@@ -11,7 +11,9 @@
     <header class="banner">
       <nav>
         <ul>
-          <li><a  class="logo_style_as_h1" href="index.html"><h1>Logo</h1></a></li>
+          <li>
+            <a class="logo_style_as_h1" href="index.html"><h1>Logo</h1></a>
+          </li>
           <li><a class="style_as_h2" href="genres.html"> GENRES </a></li>
           <li><a class="style_as_h2" href="movies.html"> MOVIES </a></li>
         </ul>
@@ -19,26 +21,30 @@
     </header>
     <main>
       <section class="hero__movie">
-        <h1>{{Movie Title}}</h1>
-        <p class="body">{{Movie Description}}</p>
-        <p class="body is--release-date">{{Release Date}}</p>
-        <img src="{{Movie img[0]}}" alt="" />
+        <template id="movie-hero">
+          <h1>{{Movie Title}}</h1>
+          <p class="body">{{Movie Description}}</p>
+          <p class="body is--release-date">{{Release Date}}</p>
+          <img src="{{Movie img[0]}}" alt="" />
+        </template>
       </section>
-      <section>
-        <h2>{{Main Actors}}</h2>
-        <ul>
-          <li class="actor__name">{{Actor name}}</li>
-          <li class="actor__name">{{Actor name}}</li>
-          <li class="actor__name">{{Actor name}}</li>
-        </ul>
-        <h2>{{Directors}}</h2>
-        <ul>
-          <li class="actor__name">{{Director name}}</li>
-          <li class="actor__name">{{Director name}}</li>
-        </ul>
-        <h2>{{Ratings}}</h2>
-        <span><img src="" alt="star" /> {{Ratings}}</span>
-        <img src="{{Movie img[1]" alt="" />
+      <section class="movie__desc">
+        <template id="movie-desc">
+          <h2>{{Main Actors}}</h2>
+          <ul>
+            <li class="actor__name">{{Actor name}}</li>
+            <li class="actor__name">{{Actor name}}</li>
+            <li class="actor__name">{{Actor name}}</li>
+          </ul>
+          <h2>{{Directors}}</h2>
+          <ul>
+            <li class="actor__name">{{Director name}}</li>
+            <li class="actor__name">{{Director name}}</li>
+          </ul>
+          <h2>{{Ratings}}</h2>
+          <span><img src="" alt="star" /> {{Ratings}}</span>
+          <img src="{{Movie img[1]" alt="" />
+        </template>
       </section>
     </main>
     <footer>
