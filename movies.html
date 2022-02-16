@@ -11,7 +11,9 @@
     <header class="banner">
       <nav>
         <ul>
-          <li><a  class="logo_style_as_h1" href="index.html"><h1>Logo</h1></a></li>
+          <li>
+            <a class="logo_style_as_h1" href="index.html"><h1>Logo</h1></a>
+          </li>
           <li><a class="style_as_h2" href="genres.html"> GENRES </a></li>
           <li><a class="style_as_h2" href="movies.html"> MOVIES </a></li>
         </ul>
@@ -27,56 +29,8 @@
         </p>
         <img src="" alt="" />
       </section>
-      <section>
+      <section class="movies">
         <h2>Movies</h2>
-        <article>
-          <a href="./movie.html">
-            <h3>{{Movie Title}}</h3>
-            <p class="body">{{Movie Short Description}}</p>
-            <p class="body is--director">{{Movie Director}}</p>
-            <p class="body is--release-date">{{Movie Release Date}}</p>
-            <span>
-              <img src="{{Movie image}}" alt="star" />
-              <p class="body is--rating">{{Movie Rating}}</p>
-            </span>
-          </a>
-        </article>
-        <article>
-          <a href="./movie.html">
-            <h3>{{Movie Title}}</h3>
-            <p class="body">{{Movie Short Description}}</p>
-            <p class="body is--director">{{Movie Director}}</p>
-            <p class="body is--release-date">{{Movie Release Date}}</p>
-            <span>
-              <img src="{{Movie image}}" alt="star" />
-              <p class="body is--rating">{{Movie Rating}}</p>
-            </span>
-          </a>
-        </article>
-        <article>
-          <a href="./movie.html">
-            <h3>{{Movie Title}}</h3>
-            <p class="body">{{Movie Short Description}}</p>
-            <p class="body is--director">{{Movie Director}}</p>
-            <p class="body is--release-date">{{Movie Release Date}}</p>
-            <span>
-              <img src="{{Movie image}}" alt="star" />
-              <p class="body is--rating">{{Movie Rating}}</p>
-            </span>
-          </a>
-        </article>
-        <article>
-          <a href="./movie.html">
-            <h3>{{Movie Title}}</h3>
-            <p class="body">{{Movie Short Description}}</p>
-            <p class="body is--director">{{Movie Director}}</p>
-            <p class="body is--release-date">{{Movie Release Date}}</p>
-            <span>
-              <img src="{{Movie image}}" alt="star" />
-              <p class="body is--rating">{{Movie Rating}}</p>
-            </span>
-          </a>
-        </article>
       </section>
     </main>
     <footer>
@@ -96,7 +50,20 @@
         </div>
       </nav>
     </footer>
-
+    <template id="movies__temp">
+      <article class="movie">
+        <a href="./movie.html" class="movie__link">
+          <h3 class="movie__title">{{Movie Title}}</h3>
+          <p class="body">{{Movie Short Description}}</p>
+          <p class="body is--director">{{Movie Director}}</p>
+          <img src="./media/cwo.jpg" alt="" />
+          <span>
+            <img src="" alt="star" />
+            <p class="body is--rating">{{Movie Rating}}</p>
+          </span>
+        </a>
+      </article>
+    </template>
     <script src="./script/movies.js"></script>
   </body>
 </html>
