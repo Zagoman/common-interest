@@ -11,15 +11,19 @@
     <header class="banner">
       <nav>
         <ul>
-          <li><a  class="logo" href="index.html"><h1>Logo</h1></a></li>
-          <li><a href="genres.html"> <h2>GENRES</h2> </a></li>
-          <li><a href="movies.html"> <h2>MOVIES</h2> </a></li>
+          <li>
+            <a class="logo" href="index.html"><h1>Logo</h1></a>
+          </li>
+          <li>
+            <a href="genres.html"> <h2>GENRES</h2> </a>
+          </li>
+          <li>
+            <a href="movies.html"> <h2>MOVIES</h2> </a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-
-
       <section class="hero">
         <h1>Your hub of great movies</h1>
         <p class="subheading">
@@ -29,7 +33,6 @@
         <a class="primary-btn">explore</a
         ><img src="./media/cwo.jpg" alt="" class="hero__img" />
       </section>
-
 
       <section class="grid2">
         <h2>70s Movies and its perks</h2>
@@ -50,17 +53,7 @@
           Click in one of the genres to have a better feeling of what to expect,
           and also see the movies that come with it
         </p>
-        <ul class="genres">
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-          <li class="genres__li"><a href="./genre.html">{{Genre}}</a></li>
-        </ul>
+        <ul class="genres"></ul>
       </section>
     </main>
     <footer>
@@ -80,7 +73,11 @@
         </div>
       </nav>
     </footer>
-
+    <template>
+      <li class="genres__li">
+        <a href="./genre.html" class="button">{{Genre}}</a>
+      </li>
+    </template>
     <script src="./script/index.js"></script>
   </body>
 </html>
