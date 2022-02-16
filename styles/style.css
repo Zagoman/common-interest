@@ -377,3 +377,39 @@ footer {
     margin-top: var(--sp-l);
   }
 }
+
+
+/* HOMEPAGE */
+
+main {
+  margin: 0px 10rem 0px 10rem;
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: 4px 4px black;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-family: var(--ff-ter);
+}
+
+.primary-btn {
+  font-family: var(--ff-sec);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--clr-bg);
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 650px) {
+
+    main {
+      margin: 0 5rem 0 5rem;
+    }
+}
