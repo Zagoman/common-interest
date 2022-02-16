@@ -168,6 +168,7 @@ main section {
   grid-gap: var(--sp-m);
   justify-items: center;
 }
+
 .movies h2 {
   grid-column: 1/-1;
 }
@@ -276,5 +277,16 @@ footer {
 
   .hero .primary-btn {
     margin-top: var(--sp-l);
+  }
+}
+
+
+/*Movies Grid*/
+
+@media screen and (min-width: 1150px) {
+  .movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
