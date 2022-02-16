@@ -20,32 +20,8 @@
       </nav>
     </header>
     <main>
-      <section class="hero__movie">
-        <template id="movie-hero">
-          <h1>{{Movie Title}}</h1>
-          <p class="body">{{Movie Description}}</p>
-          <p class="body is--release-date">{{Release Date}}</p>
-          <img src="{{Movie img[0]}}" alt="" />
-        </template>
-      </section>
-      <section class="movie__desc">
-        <template id="movie-desc">
-          <h2>{{Main Actors}}</h2>
-          <ul>
-            <li class="actor__name">{{Actor name}}</li>
-            <li class="actor__name">{{Actor name}}</li>
-            <li class="actor__name">{{Actor name}}</li>
-          </ul>
-          <h2>{{Directors}}</h2>
-          <ul>
-            <li class="actor__name">{{Director name}}</li>
-            <li class="actor__name">{{Director name}}</li>
-          </ul>
-          <h2>{{Ratings}}</h2>
-          <span><img src="" alt="star" /> {{Ratings}}</span>
-          <img src="{{Movie img[1]" alt="" />
-        </template>
-      </section>
+      <section class="hero__movie"></section>
+      <section class="movie__desc"></section>
     </main>
     <footer>
       <nav class="footer__nav">
@@ -64,6 +40,24 @@
         </div>
       </nav>
     </footer>
+    <template id="movie-desc">
+      <h2>{{Main Actors}}</h2>
+      <p></p>
+      <h2>{{Directors}}</h2>
+      <p></p>
+      <h2>{{Ratings}}</h2>
+      <span
+        ><img src="" alt="star" />
+        <p>{{Ratings}}</p></span
+      >
+      <img src="{{Movie img[1]" alt="" />
+    </template>
+    <template id="movie-hero">
+      <h1>{{Movie Title}}</h1>
+      <p class="body">{{Movie Description}}</p>
+      <p class="body is--release-date">{{Release Date}}</p>
+      <img src="{{Movie img[0]}}" alt="" />
+    </template>
 
     <script src="./script/movie.js"></script>
   </body>
