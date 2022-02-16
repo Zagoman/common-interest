@@ -94,15 +94,15 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a h1{
+header nav ul li a h1 {
   text-shadow: 3px 3px var(--clr-pri);
 }
 
-ul a{
+ul a {
   text-decoration: none;
 }
 
-header nav li a h2{
+header nav li a h2 {
   margin-top: 1rem;
   font-size: var(--fs-s);
   color: var(--clr-pri);
@@ -110,9 +110,7 @@ header nav li a h2{
 
 li:first-child {
   margin-right: auto;
-
 }
-
 
 /* ?main */
 section:first-child {
@@ -229,17 +227,31 @@ section.hero__genres {
 /* ?Footer */
 footer .footer__nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
 }
 
 footer nav ul {
   grid-column: 1/2;
-  grid-row: 3/4;
+  grid-row: 2/3;
+  padding-left: 3rem;
 }
 
 footer ul li .footer__link {
   color: white;
+}
+
+.footer_logo {
+  text-decoration: none;
+  padding-left: 3rem;
+}
+
+.footer_h1 {
+  font-size: var(--fs-l);
+}
+.footer__link h2 {
+  color: var(--clr-pri);
+  font-size: var(--fs-s);
 }
 
 footer nav p.body {
@@ -250,7 +262,7 @@ footer nav p.body {
 
 footer .email__box {
   grid-column: 3/5;
-  grid-row: 3/4;
+  grid-row: 2/3;
   display: flex;
   gap: var(--sp-m);
 }
@@ -282,6 +294,12 @@ footer .email__box {
   grid-row: 4/7;
 }
 
+input[value="send"] {
+  font-family: var(--ff-sec);
+  font-weight: bold;
+  color: var(--clr-ter);
+}
+
 input[type="submit"] {
   background-color: var(--clr-pri);
   border-radius: var(--sp-s);
@@ -292,6 +310,16 @@ input[type="submit"] {
   height: var(--sp-m);
   margin-top: auto;
   margin-left: auto;
+}
+input[value="send"]:hover {
+  color: var(--clr-ter);
+  transform: scale(1.1);
+}
+
+input[value="send"]:active {
+  transform: scale(0.98);
+  transform: translateY(4px);
+  transform: translateX(4px);
 }
 
 footer {
@@ -378,7 +406,6 @@ footer {
   }
 }
 
-
 /* HOMEPAGE */
 
 main {
@@ -408,8 +435,7 @@ h2 {
 }
 
 @media only screen and (max-width: 650px) {
-
-    main {
-      margin: 0 5rem 0 5rem;
-    }
+  main {
+    margin: 0 5rem 0 5rem;
+  }
 }
