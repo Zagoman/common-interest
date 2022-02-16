@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+@import url("https://use.typekit.net/iry6ryc.css");
+@import url("https://use.typekit.net/iry6ryc.css");
 :root {
   --clr-pri: #b43518;
-  --clr-sec: #d1;
-  --clr-ter: cyan;
+  --clr-sec: #d16c35;
+  --clr-ter: #fbb020;
   --clr-bg: rgb(249, 247, 233);
   --clr-acc: hotpink;
+  
 
   --sp-xs: 0.5rem;
   --sp-s: 1rem;
@@ -12,7 +17,10 @@
   --sp-xl: 8rem;
   --sp-xxl: 12rem;
 
-  --ff: sans-serif;
+  --ff-pri: "milka", sans-serif;
+  --ff-sec: "Heebo",sans-serif;
+  --ff-ter: "ibm-plex-mono", sans-serif;
+
   --fs-xs: 0.8rem;
   --fs-s: 1rem;
   --fs-m: 1.5rem;
@@ -37,6 +45,10 @@ p {
 }
 img {
   max-width: 100%;
+}
+h1 {
+  color: var(--clr-ter);
+  text-shadow: 3px 3px var(--clr-pri);
 }
 
 /* ?Header nav */
