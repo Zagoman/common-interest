@@ -90,6 +90,7 @@ h2 {
 
 header nav ul {
   display: flex;
+  align-items: flex-end;
   gap: var(--sp-s);
   list-style: none;
 }
@@ -103,7 +104,6 @@ ul a{
 }
 
 header nav li a h2{
-  margin-top: 1rem;
   font-size: var(--fs-s);
   color: var(--clr-pri);
 }
