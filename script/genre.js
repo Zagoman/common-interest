@@ -9,17 +9,43 @@ const options = {
 };
 fetch(urlGenre, options)
   .then((res) => res.json())
-  .then((data) => data.forEach((el) => showGenre(el)));
+  .then((data) => showGenre(data));
 fetch(urlMovies, options)
   .then((res) => res.json())
   .then((data) => data.forEach((el) => sortMovies(el)));
 
-const showGenre = (el) => {};
-const arr = [];
-const sortMovies = (el) => {
-  el.genres.forEach((item) => arr.push(item));
-  //   if () {}
+const moviesParent = document.querySelector(".movies");
+const genreParent = document.querySelector(".hero__genre");
+const genreTemp = document.querySelector("#genre__temp").content;
+const movieTemp = document.querySelector("#movies__temp").content;
+
+const showGenre = (el) => {
+  console.log(el);
+  const clone = genreTemp.cloneNode(true);
+  clone.querySelector("h1").textContent = el[0].name;
+  clone.querySelector("p").textContent = el[0].description;
+  clone.querySelector("img").src = el[0].imgs;
+
+  genreParent.append(clone);
 };
+
+const sortMovies = (el) => {
+  el.genres.forEach((item) => {
+    // console.log(genre);
+    if (item.name == genre) {
+      showMovies(el);
+    }
+  });
+};
+
 const showMovies = (el) => {
-  el.genres.forEach((item) => console.log(item.name));
+  const clone = movieTemp.cloneNode(true);
+  clone.querySelector("a").href = `./movie.html?movie=${el.title}`;
+  clone.querySelector("a h3").textContent = el.title;
+  clone.querySelector("a p:nth-child(2)").textContent = el.shortDescription;
+  clone.querySelector("a p:nth-child(3)").textContent = el.directors;
+  clone.querySelector("a img").src = el.images.mainImg;
+  clone.querySelector("a span p").textContent = el.userRatings;
+
+  moviesParent.append(clone);
 };
