@@ -187,13 +187,7 @@ main section {
   justify-items: center;
 }
 
-@media screen and (min-width: 1150px) {
-  .movies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
+
 
 .movie {
   border: 2px solid black;
