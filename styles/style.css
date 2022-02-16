@@ -84,7 +84,6 @@ h2 {
 .banner {
   background-color: var(--clr-blck);
   padding: var(--sp-s);
-  position: fixed;
   inset: 0 0 auto 0;
 }
 
