@@ -74,12 +74,7 @@ h1 {
   text-shadow: 2px 2px var(--clr-pri);
 }
 
-h2 {
-  font-family: var(--ff-sec);
-  font-weight: bold;
-  color: var(--clr-ter);
-}
-
+h2,
 .style_as_h2 {
   font-family: var(--ff-sec);
   font-weight: bold;
