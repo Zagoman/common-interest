@@ -101,8 +101,9 @@ ul a {
   text-decoration: none;
 }
 
-header nav li a h2 {
+header nav li a {
   color: var(--clr-pri);
+  font-family: var(--ff-sec);
 }
 
 li:first-child {
@@ -554,6 +555,9 @@ section.hero__genres {
   .footer__link a:hover {
     color: var(--clr-ter);
     transform: scale(1.2);
+  }
+  header nav li a:hover {
+    color: var(--clr-sec);
   }
   section[class="hero__genre"] {
     grid-template-columns: 2fr 3fr;
