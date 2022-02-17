@@ -25,12 +25,14 @@ const showMovie = (el) => {
   cloneHero.querySelector("p:nth-child(2)").textContent = el[0].longDescription;
   cloneHero.querySelector("p:nth-child(3)").textContent = el[0].releaseYear;
   cloneHero.querySelector("img").src = el[0].images.mainImg;
+  cloneHero.querySelector("img").alt = `${el[0].title} poster image`;
 
   // Description
   cloneDesc.querySelector("p:nth-child(2)").textContent = el[0].castMembers;
   cloneDesc.querySelector("p:nth-child(4)").textContent = el[0].directors;
   cloneDesc.querySelector("span p").textContent = el[0].userRatings;
   cloneDesc.querySelector("img:last-child").src = el[0].images.secondaryImg;
+  cloneDesc.querySelector("img:last-child").alt = `${el[0].title} image`;
   //   Append
   heroParent.append(cloneHero);
   descParent.append(cloneDesc);

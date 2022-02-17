@@ -25,6 +25,7 @@ const showGenre = (el) => {
   clone.querySelector("h1").textContent = el[0].name;
   clone.querySelector("p").textContent = el[0].description;
   clone.querySelector("img").src = el[0].imgs;
+  clone.querySelector("img").alt = `${el[0].name} image`;
 
   genreParent.append(clone);
 };
@@ -45,6 +46,7 @@ const showMovies = (el) => {
   clone.querySelector("a p:nth-child(2)").textContent = el.shortDescription;
   clone.querySelector("a p:nth-child(3)").textContent = el.directors;
   clone.querySelector("a > img").src = el.images.mainImg;
+  clone.querySelector("a > img").alt = `${el.title} poster`;
   clone.querySelector("a span p").textContent = el.userRatings;
 
   moviesParent.append(clone);
