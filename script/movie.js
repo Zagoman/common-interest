@@ -50,7 +50,8 @@ const showMovie = (el) => {
   cloneHero.querySelector("h1").textContent = el[0].title;
   cloneHero.querySelector("p:nth-child(2)").textContent = el[0].longDescription;
   cloneHero.querySelector("p:nth-child(3)").textContent = el[0].releaseYear;
-  cloneHero.querySelector("img").src = el[0].images.mainImage;
+  // console.log(el[0].images.mainImg);
+  cloneHero.querySelector("img").src = el[0].images.mainImg;
 
   // Description
   cloneDesc.querySelector("p:nth-child(2)").textContent = el[0].castMembers;
