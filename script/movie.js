@@ -57,6 +57,7 @@ const showMovie = (el) => {
   cloneDesc.querySelector("p:nth-child(2)").textContent = el[0].castMembers;
   cloneDesc.querySelector("p:nth-child(4)").textContent = el[0].directors;
   cloneDesc.querySelector("span p").textContent = el[0].userRatings;
+  cloneDesc.querySelector("img:last-child").src = el[0].images.secondaryImg;
   //   Append
   heroParent.append(cloneHero);
   descParent.append(cloneDesc);
