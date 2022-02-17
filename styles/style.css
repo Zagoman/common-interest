@@ -54,6 +54,7 @@ img {
 .button {
   font-family: var(--ff-sec);
   color: var(--clr-bg);
+  transition: all 0.3s ease;
 }
 
 h1,
@@ -73,6 +74,7 @@ h2,
   font-weight: bold;
   color: var(--clr-ter);
   line-height: 1.1;
+  max-width: 27ch;
 }
 h3 {
   font-family: var(--ff-sec);
@@ -143,6 +145,11 @@ main section {
   width: 100%;
   background-color: var(--clr-sec);
   text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.primary-btn:hover {
+  background-color: var(--clr-ter);
 }
 .grid2,
 .grid1 {
@@ -353,6 +360,9 @@ section.hero__genres {
 .movie__desc > p {
   margin-bottom: var(--sp-m);
 }
+.genres__li {
+  transition: all 0.1s ease-out;
+}
 /* .hero__genre {
   min-height: 100vh;
 
@@ -489,6 +499,7 @@ section.hero__genres {
   .footer__link a {
     color: var(--clr-pri);
     font-size: var(--fs-s);
+    transition: color 0.3s ease;
   }
 
   footer nav p.body {
@@ -563,7 +574,7 @@ section.hero__genres {
   }
   .genres .genres__li:hover {
     color: var(--clr-ter);
-    transform: scale(1.07);
+    transform: scale(1.03);
   }
 
   .genres .genres__li:active {
@@ -571,10 +582,7 @@ section.hero__genres {
     transform: translateY(4px);
     transform: translateX(4px);
   }
-  .footer__link a:hover {
-    color: var(--clr-ter);
-    transform: scale(1.2);
-  }
+
   input[value="send"]:hover {
     color: var(--clr-ter);
     transform: scale(1.1);
