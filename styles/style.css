@@ -380,7 +380,7 @@ section.hero__genres {
     /* grid-row: 4/-1; */
   }
   section:first-child p {
-    max-width: 40ch;
+    max-width: 62ch;
   }
   footer {
     margin-top: var(--sp-l);
