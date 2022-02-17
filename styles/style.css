@@ -23,9 +23,9 @@
 
   --fs-xs: 0.8rem;
   --fs-s: 1rem;
-  --fs-m: 1.5rem;
-  --fs-l: 2.5rem;
-  --fs-xl: 4rem;
+  --fs-m: clamp(1.3rem, 1.68vw + 0.8rem, 2.3rem);
+  --fs-l: clamp(1.7rem, 2.36vw + 1rem, 3.1rem);
+  --fs-xl: clamp(2.3rem, 3.54vw + 1rem, 4.2rem);
 }
 * {
   margin: 0;
@@ -59,16 +59,24 @@ img {
 h1,
 .logo_style_as_h1 {
   font-family: "milka";
+  font-size: var(--fs-xl);
   font-weight: normal;
   color: var(--clr-ter);
   text-shadow: 2px 2px var(--clr-pri);
+  line-height: 1.1;
 }
 
 h2,
 .style_like_h2 {
   font-family: var(--ff-sec);
+  font-size: var(--fs-l);
   font-weight: bold;
   color: var(--clr-ter);
+  line-height: 1.1;
+}
+h3 {
+  font-size: var(--fs-m);
+  line-height: 1.1;
 }
 
 /* ?Header nav */
@@ -94,7 +102,6 @@ ul a {
 }
 
 header nav li a h2 {
-  font-size: var(--fs-s);
   color: var(--clr-pri);
 }
 
@@ -166,9 +173,15 @@ main section {
 }
 .movies {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   */
   grid-gap: var(--sp-m);
   justify-items: center;
+}
+.movie__title {
+  margin-top: var(--sp-s);
+}
+.movie__link span {
+  margin-bottom: var(--sp-s);
 }
 
 /* ?Footer */
@@ -482,12 +495,10 @@ section.hero__genres {
   /* HOMEPAGE */
 
   h1 {
-    font-size: 4rem;
     text-shadow: 4px 4px black;
   }
 
   h2 {
-    font-size: 2rem;
     text-transform: uppercase;
   }
 
@@ -544,6 +555,9 @@ section.hero__genres {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
     margin: auto;
+  }
+  .movie__link {
+    grid-gap: var(--sp-m);
   }
 }
 
