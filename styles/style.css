@@ -56,13 +56,15 @@ img {
   color: var(--clr-bg);
 }
 
-.button:hover {
+
+
+.genres .genres__li:hover{
   color: var(--clr-ter);
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
-.button:active {
-  transform: scale(0.98);
+.genres .genres__li:active{
+  transform: scale(0.95);
   transform: translateY(4px);
   transform: translateX(4px);
 }
@@ -75,8 +77,7 @@ h1,
   text-shadow: 2px 2px var(--clr-pri);
 }
 
-h2,
-.style_as_h2 {
+h2, .style_like_h2{
   font-family: var(--ff-sec);
   font-weight: bold;
   color: var(--clr-ter);
@@ -532,5 +533,16 @@ section.hero__genres {
 @media only screen and (max-width: 650px) {
   main {
     margin: 0 5rem 0 5rem;
+  }
+}
+
+
+/*Movies Grid*/
+
+@media screen and (min-width: 1150px) {
+  .movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
