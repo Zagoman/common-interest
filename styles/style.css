@@ -428,8 +428,16 @@ section.hero__genres {
   footer .footer__nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
   }
+  footer nav .byline {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    font-family: var(--ff-ter);
+    font-size: var(--fs-xs);
+    align-self: end;
+  }
+
   footer nav ul {
     grid-column: 1/2;
     grid-row: 2/3;
