@@ -121,9 +121,6 @@ section:first-child {
   max-height: 50vh;
   justify-self: center;
 }
-section:first-child p {
-  max-width: 26ch;
-}
 
 main section {
   padding-inline: var(--sp-s);
@@ -307,6 +304,14 @@ section.hero__genres {
   grid-gap: var(--sp-s);
 }
 /* ?Genre Page */
+.hero__genre img {
+  grid-column: 1/2;
+  /* grid-row: 1/-1; */
+  order: -1;
+}
+.hero__genre h1 {
+  order: -2;
+}
 /* .hero__genre {
   min-height: 100vh;
 
@@ -348,6 +353,9 @@ section.hero__genres {
     grid-row: 1/-1;
     align-self: center;
   }
+  section[class="hero__genre"] {
+    grid-template-columns: 1fr;
+  }
   .primary-btn {
     width: auto;
     padding-inline: var(--sp-l);
@@ -377,10 +385,7 @@ section.hero__genres {
   .genres {
     display: grid;
   }
-  .hero__genre img {
-    grid-column: 1/2;
-    grid-row: 1/-1;
-  }
+
   section.hero__genres {
     grid-template-rows: auto 1fr;
   }
@@ -476,10 +481,6 @@ section.hero__genres {
 
   /* HOMEPAGE */
 
-  main {
-    margin: 0px 10rem 0px 10rem;
-  }
-
   h1 {
     font-size: 4rem;
     text-shadow: 4px 4px black;
@@ -527,16 +528,22 @@ section.hero__genres {
     color: var(--clr-ter);
     transform: scale(1.2);
   }
+  section[class="hero__genre"] {
+    grid-template-columns: 2fr 3fr;
+  }
+  .hero__genre img {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+  .movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    margin: auto;
+  }
 }
 
 /*Movies Grid*/
 
 @media screen and (min-width: 1150px) {
-  .movies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 3rem;
-    margin: auto;
-  }
 }

@@ -44,7 +44,7 @@ const showMovies = (el) => {
   clone.querySelector("a h3").textContent = el.title;
   clone.querySelector("a p:nth-child(2)").textContent = el.shortDescription;
   clone.querySelector("a p:nth-child(3)").textContent = el.directors;
-  clone.querySelector("a img").src = el.images.mainImg;
+  clone.querySelector("a > img").src = el.images.mainImg;
   clone.querySelector("a span p").textContent = el.userRatings;
 
   moviesParent.append(clone);
