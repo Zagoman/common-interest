@@ -186,50 +186,11 @@ main section {
   justify-items: center;
 }
 
-.movie {
-  border: 2px solid black;
-  padding: var(--sp-l);
-}
-
-.movies h2 {
-  grid-column: 1/-1;
-}
-.movie__link {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: auto auto auto 1fr;
-  grid-gap: var(--sp-s);
-}
-.movie__link > img {
-  grid-column: 1/2;
-  grid-row: 1/-1;
-}
-section.hero__genres {
-  grid-template-rows: auto 1fr;
-}
-section[class="hero__movie"] {
-  display: grid;
-  grid-gap: var(--sp-m);
-}
-/* ?Genre Page */
-/* .hero__genre {
-  min-height: 100vh;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: var(--sp-m);
-} */
-
 /* ?Footer */
-footer .footer__nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr;
-}
 
 footer nav ul {
-  grid-column: 1/2;
-  grid-row: 2/3;
+  /* grid-column: 1/2;
+  grid-row: 2/3; */
   padding-left: 3rem;
 }
 
@@ -240,6 +201,10 @@ footer ul li .footer__link {
 .footer_logo {
   text-decoration: none;
   padding-left: 3rem;
+}
+
+.footer__nav {
+  padding: var(--sp-m);
 }
 
 .footer_h1 {
@@ -257,21 +222,30 @@ footer ul li .footer__link {
 
 footer nav p.body {
   color: white;
-  grid-column: 3/4;
-  grid-row: 3/4;
+  /* grid-column: 3/4;
+  grid-row: 3/4; */
+}
+
+.input__box {
+  flex-direction: column;
+  display: flex;
 }
 
 footer .email__box {
-  grid-column: 3/5;
+  /* grid-column: 3/5;
   grid-row: 2/3;
-  display: flex;
+  display: flex; */
   gap: var(--sp-m);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--sp-s);
 }
 
 .email {
-  grid-column: 4/5;
+  /* grid-column: 4/5;
   grid-row: 3/4;
-  display: grid;
+  display: grid; */
   justify-content: center;
   align-content: center;
   background-color: var(--clr-bg);
@@ -284,16 +258,16 @@ footer .email__box {
 }
 
 .submit {
-  grid-column: 4/5;
+  /* grid-column: 4/5;
   grid-row: 4/5;
-  display: grid;
+  display: grid; */
   justify-content: center;
   justify-self: end;
 }
 
-.input__box {
+/* .input__box {
   grid-row: 4/7;
-}
+} */
 
 input[value="send"] {
   font-family: var(--ff-sec);
@@ -326,6 +300,46 @@ input[value="send"]:active {
 footer {
   background-color: var(--clr-sec);
 }
+
+@media screen and (min-width: 1150px) {
+  .movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.movie {
+  border: 2px solid black;
+  padding: var(--sp-l);
+}
+
+.movies h2 {
+  grid-column: 1/-1;
+}
+.movie__link {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto auto 1fr;
+  grid-gap: var(--sp-s);
+}
+.movie__link > img {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+section.hero__genres {
+  grid-template-rows: auto 1fr;
+}
+
+/* ?Genre Page */
+/* .hero__genre {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--sp-m);
+} */
+
 /* !Media Queries */
 /* !Media Queries */
 /* !Media Queries */
@@ -399,6 +413,7 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 @media only screen and (min-width: 900px) {
   /* ?main */
   section:first-child {
@@ -407,6 +422,79 @@ footer {
 
   .hero .primary-btn {
     margin-top: var(--sp-l);
+  }
+  footer .footer__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer nav ul {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-left: 3rem;
+  }
+
+  footer ul li .footer__link {
+    color: white;
+  }
+
+  .footer_logo {
+    text-decoration: none;
+    padding-left: 3rem;
+  }
+
+  .footer_h1 {
+    font-size: var(--fs-l);
+  }
+  .footer__link a {
+    color: var(--clr-pri);
+    font-size: var(--fs-s);
+  }
+
+  .footer__link a:hover {
+    color: var(--clr-ter);
+    transform: scale(1.2);
+  }
+
+  footer nav p.body {
+    color: white;
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  footer .email__box {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    gap: var(--sp-m);
+  }
+
+  .email {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--clr-bg);
+    border-radius: var(--sp-s);
+    font-family: var(--ff-sec);
+    color: #000;
+    padding: var(--sp-s);
+    border: none;
+    margin-bottom: var(--sp-s);
+  }
+
+  .submit {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    display: grid;
+    justify-content: center;
+    justify-self: end;
+  }
+
+  .input__box {
+    grid-row: 4/7;
   }
 
   /* HOMEPAGE */
@@ -441,7 +529,6 @@ footer {
     grid-template-columns: auto auto auto 1fr;
   }
 }
-
 @media only screen and (max-width: 650px) {
   main {
     margin: 0 5rem 0 5rem;
