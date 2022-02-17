@@ -11,33 +11,7 @@ fetch(url, options)
   .then((res) => res.json())
   .then((data) => showMovie(data));
 
-/* 
-  <template id="movie-hero">
-          <h1>{{Movie Title}}</h1>
-          <p class="body">{{Movie Description}}</p>
-          <p class="body is--release-date">{{Release Date}}</p>
-          <img src="{{Movie img[0]}}" alt="" />
-        </template>
-  */
-
-/*
-  <template id="movie-desc">
-          <h2>{{Main Actors}}</h2>
-          <ul>
-            <li class="actor__name">{{Actor name}}</li>
-            <li class="actor__name">{{Actor name}}</li>
-            <li class="actor__name">{{Actor name}}</li>
-          </ul>
-          <h2>{{Directors}}</h2>
-          <ul>
-            <li class="actor__name">{{Director name}}</li>
-            <li class="actor__name">{{Director name}}</li>
-          </ul>
-          <h2>{{Ratings}}</h2>
-          <span><img src="" alt="star" /> {{Ratings}}</span>
-          <img src="{{Movie img[1]" alt="" />
-        </template>          
- */
+document.querySelector("title").textContent = movie;
 const heroTemp = document.querySelector("#movie-hero").content;
 const descTemp = document.querySelector("#movie-desc").content;
 const heroParent = document.querySelector(".hero__movie");
@@ -50,7 +24,6 @@ const showMovie = (el) => {
   cloneHero.querySelector("h1").textContent = el[0].title;
   cloneHero.querySelector("p:nth-child(2)").textContent = el[0].longDescription;
   cloneHero.querySelector("p:nth-child(3)").textContent = el[0].releaseYear;
-  // console.log(el[0].images.mainImg);
   cloneHero.querySelector("img").src = el[0].images.mainImg;
 
   // Description

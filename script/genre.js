@@ -13,7 +13,7 @@ fetch(urlGenre, options)
 fetch(urlMovies, options)
   .then((res) => res.json())
   .then((data) => data.forEach((el) => sortMovies(el)));
-
+document.querySelector("title").textContent = genre;
 const moviesParent = document.querySelector(".movies");
 const genreParent = document.querySelector(".hero__genre");
 const genreTemp = document.querySelector("#genre__temp").content;
