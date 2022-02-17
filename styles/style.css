@@ -347,6 +347,7 @@ section.hero__genres {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     min-height: 60vh;
+    grid-gap: var(--sp-m);
   }
   main section {
     padding-top: var(--sp-l);
@@ -411,6 +412,9 @@ section.hero__genres {
 }
 
 @media only screen and (min-width: 900px) {
+  section:first-child {
+    grid-gap: var(--sp-l);
+  }
   /* ?main */
   main section {
     padding-inline: var(--sp-s);
